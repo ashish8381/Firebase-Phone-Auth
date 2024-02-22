@@ -6,6 +6,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Base64;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.demo.firebasephoneauth.model.User;
@@ -23,6 +25,8 @@ public class ProfileDisplay extends AppCompatActivity {
     TextView mname,memail,maddress;
     CircleImageView mimage;
 
+    ProgressBar mprogress;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +35,8 @@ public class ProfileDisplay extends AppCompatActivity {
         mname=findViewById(R.id.name);
         memail=findViewById(R.id.email);
         maddress=findViewById(R.id.address);
+
+        mprogress=findViewById(R.id.profile_display_loading);
 
         mimage=findViewById(R.id.image);
 
@@ -58,15 +64,17 @@ public class ProfileDisplay extends AppCompatActivity {
                         memail.setText(email);
                         maddress.setText(address);
 
+                        mprogress.setVisibility(View.GONE);
+
                     }
                 } else {
-                    // User data not found
+                    mprogress.setVisibility(View.GONE);
                 }
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                // Handle error
+                mprogress.setVisibility(View.GONE);
             }
         });
 

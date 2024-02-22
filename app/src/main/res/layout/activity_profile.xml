@@ -26,6 +26,15 @@
 
     </LinearLayout>
 
+    <ProgressBar
+        android:id="@+id/profile_loading"
+        android:visibility="gone"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
         android:layout_centerHorizontal="true"

@@ -13,6 +13,7 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 import com.demo.firebasephoneauth.model.User;
 import com.google.android.material.textfield.TextInputEditText;
@@ -33,6 +34,8 @@ public class ProfileActivity extends AppCompatActivity {
     CircleImageView mimg;
     Button msubmit;
 
+    ProgressBar mprogress;
+
     byte[] imageData;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +46,8 @@ public class ProfileActivity extends AppCompatActivity {
         mname=findViewById(R.id.profile_name);
         memail=findViewById(R.id.profile_email);
         maddress=findViewById(R.id.profile_address);
+
+        mprogress=findViewById(R.id.profile_loading);
 
         msubmit=findViewById(R.id.create_profile);
 
@@ -67,14 +72,10 @@ public class ProfileActivity extends AppCompatActivity {
                 if (name.isEmpty() || email.isEmpty() || address.isEmpty()) {
                     Log.e("errorlog","fields are empty");
                 }else{
-
-
+                    mprogress.setVisibility(View.VISIBLE);
                     updatedata(name,email,address,imageData);
+
                 }
-
-
-
-
             }
         });
 
@@ -88,7 +89,7 @@ public class ProfileActivity extends AppCompatActivity {
             Uri selectedImageUri = data.getData();
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), selectedImageUri);
-                // Convert Bitmap to byte array
+                mimg.setImageBitmap(bitmap);
                 ByteArrayOutputStream baos = new ByteArrayOutputStream();
                 bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
                 imageData = baos.toByteArray();
@@ -119,13 +120,17 @@ public class ProfileActivity extends AppCompatActivity {
         // Upload user data to Firebase Realtime Database
         databaseReference.child("user").child(userId).setValue(user)
                 .addOnSuccessListener(aVoid ->{
-
+                    mprogress.setVisibility(View.GONE);
+                    Log.d("FirebaseUtils", "User data uploaded successfully");
                     Intent intent = new Intent(ProfileActivity.this, ProfileDisplay.class);
                     startActivity(intent);
-                    Log.d("FirebaseUtils", "User data uploaded successfully");
+
 
                 })
-                .addOnFailureListener(e -> Log.e("FirebaseUtils", "Error uploading user data: " + e.getMessage()));
+                .addOnFailureListener(e ->{
+                    mprogress.setVisibility(View.GONE);
+                    Log.e("FirebaseUtils", "Error uploading user data: " + e.getMessage());
+                });
 
 
     }

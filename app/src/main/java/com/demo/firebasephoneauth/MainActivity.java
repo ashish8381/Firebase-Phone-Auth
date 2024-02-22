@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -34,8 +35,7 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout mphonelayout,mphonelayout2;
     Button msendotpbtn,msubmitotp;
 
-
-
+    ProgressBar mprogress;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
 
         msendotpbtn=findViewById(R.id.signup_btn);
 
+
+        mprogress=findViewById(R.id.verification_loading);
+
         mphonelayout=findViewById(R.id.LinearLayout_Phone);
         msubmitotp=findViewById(R.id.signup_confirm);
         motp=findViewById(R.id.otp_field);
@@ -56,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
         msendotpbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                mprogress.setVisibility(View.VISIBLE);
                 String number=mphone.getText().toString();
                 sendotp(number);
             }
@@ -64,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         msubmitotp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mprogress.setVisibility(View.VISIBLE);
                 String otp=motp.getText().toString();
                 verifyPhoneNumberWithCode(mVerificationId,otp);
             }
@@ -86,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
                             // Save verification ID and resending token so we can use them later
                             mVerificationId = verificationId;
                             mResendToken = forceResendingToken;
+                            mprogress.setVisibility(View.GONE);
                             mphonelayout.setVisibility(View.GONE);
                             mphonelayout2.setVisibility(View.VISIBLE);
 
@@ -116,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
                             Log.d(TAG, "signInWithCredential:success");
 
                             FirebaseUser user = task.getResult().getUser();
+                            mprogress.setVisibility(View.GONE);
                             updateUI();
                         } else {
                             // Sign in failed, display a message and update the UI
