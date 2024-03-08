@@ -2,11 +2,14 @@ package com.demo.firebasephoneauth;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Base64;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -25,6 +28,10 @@ public class ProfileDisplay extends AppCompatActivity {
     TextView mname,memail,maddress;
     CircleImageView mimage;
 
+    FirebaseAuth mauth;
+
+    Button mlogout;
+
     ProgressBar mprogress;
 
     @Override
@@ -40,17 +47,30 @@ public class ProfileDisplay extends AppCompatActivity {
 
         mimage=findViewById(R.id.image);
 
+        mlogout=findViewById(R.id.logout);
+
+        String  device_id= Settings.Secure.getString(this.getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+
 
         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("FirebasePhoneAuth");
 
         String userId = firebaseAuth.getCurrentUser().getUid();
 
-        databaseReference.child("user").child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
+
+        databaseReference.child("user").child(userId).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
                     User user = dataSnapshot.getValue(User.class);
+
+                    if(device_id.equals(user.getDeviceid())){
+
+                    }else{
+                        updateui();
+                    }
+
                     if (user != null) {
                         String name = user.getName();
                         String address = user.getAddress();
@@ -80,6 +100,23 @@ public class ProfileDisplay extends AppCompatActivity {
 
 
 
+        mlogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                updateui();
+
+            }
+        });
+
+
+    }
+
+    private void updateui() {
+        FirebaseAuth.getInstance().signOut();
+        Intent intent = new Intent(ProfileDisplay.this,MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     public static Bitmap convertBase64ToImage(String base64String) {

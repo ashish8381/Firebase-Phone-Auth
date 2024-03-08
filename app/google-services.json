@@ -1,1 +1,289 @@
-
+{
+  "project_info": {
+    "project_number": "787030829165",
+    "firebase_url": "https://wallpaper-a3faa.firebaseio.com",
+    "project_id": "wallpaper-a3faa",
+    "storage_bucket": "wallpaper-a3faa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787030829165:android:a6e9848be18f521c",
+        "android_client_info": {
+          "package_name": "com.amdevelopers6659.www.pubgwallpaper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787030829165-c32riuiiq3ukooq3o9vjd600e03rrjsr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.amdevelopers6659.www.pubgwallpaper",
+            "certificate_hash": "36de7ebeadc6b5e31a5615570bf124b86de0e99a"
+          }
+        },
+        {
+          "client_id": "787030829165-o928psbvsipp5fat7k756nru2qt956rd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrq6hMrZuUCYJ-xKgR1VjSNrio_RkonJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787030829165-o928psbvsipp5fat7k756nru2qt956rd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-3635454769152477~9009582670"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787030829165:android:d798f882c9c3014d247764",
+        "android_client_info": {
+          "package_name": "com.amdevelopers6659.www.tiktokboost"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787030829165-8fr6pn84fpmvf6tchpe81bo0nfb78hcv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.amdevelopers6659.www.tiktokboost",
+            "certificate_hash": "c8351f6c36afeb58847ca680d46cfbeac7bbeef9"
+          }
+        },
+        {
+          "client_id": "787030829165-mcgckvu1ri1hr396m028a778sepjasr8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.amdevelopers6659.www.tiktokboost",
+            "certificate_hash": "36de7ebeadc6b5e31a5615570bf124b86de0e99a"
+          }
+        },
+        {
+          "client_id": "787030829165-sfcbp5i4dsn5h1l5a1j9k78uvvhp7v9c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.amdevelopers6659.www.tiktokboost",
+            "certificate_hash": "01426b596cbc0ed3c9491ad2c183f65762540475"
+          }
+        },
+        {
+          "client_id": "787030829165-o928psbvsipp5fat7k756nru2qt956rd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrq6hMrZuUCYJ-xKgR1VjSNrio_RkonJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787030829165-o928psbvsipp5fat7k756nru2qt956rd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-3635454769152477~7319155731"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787030829165:android:c358f2bfd67a8f42247764",
+        "android_client_info": {
+          "package_name": "com.amdevelopers6659.www.uscovid19update"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787030829165-553vuiqpks5vfu14fvermpr0ulgvn4j9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.amdevelopers6659.www.uscovid19update",
+            "certificate_hash": "36de7ebeadc6b5e31a5615570bf124b86de0e99a"
+          }
+        },
+        {
+          "client_id": "787030829165-o928psbvsipp5fat7k756nru2qt956rd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrq6hMrZuUCYJ-xKgR1VjSNrio_RkonJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787030829165-o928psbvsipp5fat7k756nru2qt956rd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787030829165:android:9b18108b439eef14",
+        "android_client_info": {
+          "package_name": "com.amdevelopers6659.www.wallpaperapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787030829165-id9f7gh1s836vot20oj3q12fosm5cen5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.amdevelopers6659.www.wallpaperapp",
+            "certificate_hash": "36de7ebeadc6b5e31a5615570bf124b86de0e99a"
+          }
+        },
+        {
+          "client_id": "787030829165-o928psbvsipp5fat7k756nru2qt956rd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrq6hMrZuUCYJ-xKgR1VjSNrio_RkonJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787030829165-o928psbvsipp5fat7k756nru2qt956rd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-3635454769152477~3683388784"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787030829165:android:66f696fd9169e19c247764",
+        "android_client_info": {
+          "package_name": "com.amdevops.ipllive2021score.watchipllive.ipl2021live.liveipl2021.watchliveipl2021"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787030829165-2mpptniji4ujfkg7ka4c79rverso70bu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.amdevops.ipllive2021score.watchipllive.ipl2021live.liveipl2021.watchliveipl2021",
+            "certificate_hash": "36de7ebeadc6b5e31a5615570bf124b86de0e99a"
+          }
+        },
+        {
+          "client_id": "787030829165-o928psbvsipp5fat7k756nru2qt956rd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrq6hMrZuUCYJ-xKgR1VjSNrio_RkonJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787030829165-o928psbvsipp5fat7k756nru2qt956rd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787030829165:android:04f090e22332a71b247764",
+        "android_client_info": {
+          "package_name": "com.amdevops.scratchwincash.scratchandwinpatymcash2020.winpaytmcash.scratchandredeem.snackvideos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787030829165-irt16vkuner77u2jmlmptel9imlas745.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.amdevops.scratchwincash.scratchandwinpatymcash2020.winpaytmcash.scratchandredeem.snackvideos",
+            "certificate_hash": "36de7ebeadc6b5e31a5615570bf124b86de0e99a"
+          }
+        },
+        {
+          "client_id": "787030829165-o928psbvsipp5fat7k756nru2qt956rd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrq6hMrZuUCYJ-xKgR1VjSNrio_RkonJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787030829165-o928psbvsipp5fat7k756nru2qt956rd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787030829165:android:48bf5ee110d66410247764",
+        "android_client_info": {
+          "package_name": "com.demo.firebasephoneauth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787030829165-hlq7fc0l770vs7bq9bp1qktfc2evm80n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.demo.firebasephoneauth",
+            "certificate_hash": "36de7ebeadc6b5e31a5615570bf124b86de0e99a"
+          }
+        },
+        {
+          "client_id": "787030829165-o928psbvsipp5fat7k756nru2qt956rd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrq6hMrZuUCYJ-xKgR1VjSNrio_RkonJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787030829165-o928psbvsipp5fat7k756nru2qt956rd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -6,15 +6,26 @@ public class User {
     private String email;
     private String image;
 
+     private String deviceid;
+
     public User() {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)
     }
 
-    public User(String name, String address, String email, String image) {
+    public User(String name, String address, String email, String image, String deviceid) {
         this.name = name;
         this.address = address;
         this.email = email;
         this.image = image;
+        this.deviceid = deviceid;
+    }
+
+    public String getDeviceid() {
+        return deviceid;
+    }
+
+    public void setDeviceid(String deviceid) {
+        this.deviceid = deviceid;
     }
 
     public String getName() {

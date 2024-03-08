@@ -9,6 +9,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.provider.Settings;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
@@ -115,7 +116,9 @@ public class ProfileActivity extends AppCompatActivity {
         // Get the user ID of the currently authenticated user
         String userId = firebaseAuth.getCurrentUser().getUid();
         String imageBase64 = convertBitmapToBase64(imageBytes);
-        User user = new User(name, address, email, imageBase64);
+        String device_id= Settings.Secure.getString(this.getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+        User user = new User(name, address, email, imageBase64,device_id);
 
         // Upload user data to Firebase Realtime Database
         databaseReference.child("user").child(userId).setValue(user)
